@@ -8,9 +8,9 @@
 
 ### 🎯 SDG Theme
 
-**SDG 8: Decent Work and Economic Growth**
+**SDG 1: No Poverty**
 
-> "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all."
+> "> "End poverty in all its forms everywhere. By providing access to employment opportunities, the app helps individuals secure stable income and break the cycle of poverty."
 
 ---
 
@@ -75,11 +75,11 @@
 |--------|-------------|
 | **Name** | Alieya Balqish |
 | **Matric No.** | A210192 |
-| **Programme** | Bachelor of Computer Science |
-| **Instructor** | Dr. Niza |
+| **Programme** | Bachelor of Information Technology |
+| **Instructor** | Dr. Rimaniza |
 | **Course** | TK2323 / TM2213 |
 | **Assignment** | Project 2 |
-| **Submission Date** | 19 June 2026 |
+| **Submission Date** | 20 June 2026 |
 
 ---
 
