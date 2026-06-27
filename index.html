@@ -166,6 +166,35 @@
             margin-top: 4px;
         }
 
+        .screenshot-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 10px 0;
+        }
+
+        .screenshot-box {
+            text-align: center;
+        }
+
+        .screenshot-box img {
+            width: 150px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .screenshot-box img:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot-box p {
+            font-size: 0.7rem;
+            color: #6a6a8a;
+            margin-top: 4px;
+        }
+
         .footer {
             text-align: center;
             padding: 20px 0 10px;
@@ -179,6 +208,9 @@
             }
             .header h1 {
                 font-size: 1.8rem;
+            }
+            .screenshot-box img {
+                width: 120px;
             }
         }
     </style>
@@ -234,11 +266,20 @@
         <section class="section">
             <h2>📚 Lab Submissions</h2>
 
-            <!-- LAB 1 -->
+            <!-- ===== LAB 1 ===== -->
             <div class="lab-item">
                 <h3>📘 Lab 1 — UI</h3>
                 <p><strong>Topic:</strong> User Interface with Jetpack Compose</p>
                 <p><strong>What I learned:</strong> Column, Row, Box layouts, Text, Image, Button, and Material Design components.</p>
+
+                <!-- Screenshot -->
+                <div class="screenshot-container">
+                    <div class="screenshot-box">
+                        <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/lab1_screenshot.png" alt="Lab 1 Screenshot" />
+                        <p>📸 Lab 1 - UI Screenshot</p>
+                    </div>
+                </div>
+
                 <p class="video-link">
                     <a class="link" href="YOUR_LAB1_YOUTUBE_LINK" target="_blank">🎥 Watch Lab 1 Demo →</a>
                 </p>
@@ -247,11 +288,20 @@
                 </div>
             </div>
 
-            <!-- LAB 2 -->
+            <!-- ===== LAB 2 ===== -->
             <div class="lab-item">
                 <h3>📘 Lab 2 — Interaction</h3>
                 <p><strong>Topic:</strong> User Interaction &amp; State Management</p>
                 <p><strong>What I learned:</strong> State management with remember and mutableStateOf, handling button clicks, text input, and UI updates.</p>
+
+                <!-- Screenshot -->
+                <div class="screenshot-container">
+                    <div class="screenshot-box">
+                        <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/lab2_screenshot.png" alt="Lab 2 Screenshot" />
+                        <p>📸 Lab 2 - Interaction Screenshot</p>
+                    </div>
+                </div>
+
                 <p class="video-link">
                     <a class="link" href="YOUR_LAB2_YOUTUBE_LINK" target="_blank">🎥 Watch Lab 2 Demo →</a>
                 </p>
@@ -260,11 +310,20 @@
                 </div>
             </div>
 
-            <!-- LAB 3 -->
+            <!-- ===== LAB 3 ===== -->
             <div class="lab-item">
                 <h3>📘 Lab 3 — Material Design</h3>
                 <p><strong>Topic:</strong> Material Design 3 Components</p>
                 <p><strong>What I learned:</strong> Cards, Chips, FloatingActionButton, BottomNavigation, and theming with Material 3.</p>
+
+                <!-- Screenshot -->
+                <div class="screenshot-container">
+                    <div class="screenshot-box">
+                        <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/lab3_screenshot.png" alt="Lab 3 Screenshot" />
+                        <p>📸 Lab 3 - Material Design Screenshot</p>
+                    </div>
+                </div>
+
                 <p class="video-link">
                     <a class="link" href="YOUR_LAB3_YOUTUBE_LINK" target="_blank">🎥 Watch Lab 3 Demo →</a>
                 </p>
@@ -273,11 +332,20 @@
                 </div>
             </div>
 
-            <!-- LAB 4 -->
+            <!-- ===== LAB 4 ===== -->
             <div class="lab-item">
                 <h3>📘 Lab 4 — Navigation</h3>
                 <p><strong>Topic:</strong> Navigation with Jetpack Compose</p>
                 <p><strong>What I learned:</strong> NavHost, composable routes, passing arguments between screens, and BottomNavigation.</p>
+
+                <!-- Screenshot -->
+                <div class="screenshot-container">
+                    <div class="screenshot-box">
+                        <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/lab4_screenshot.png" alt="Lab 4 Screenshot" />
+                        <p>📸 Lab 4 - Navigation Screenshot</p>
+                    </div>
+                </div>
+
                 <p class="video-link">
                     <a class="link" href="YOUR_LAB4_YOUTUBE_LINK" target="_blank">🎥 Watch Lab 4 Demo →</a>
                 </p>
@@ -286,11 +354,20 @@
                 </div>
             </div>
 
-            <!-- LAB 5 -->
+            <!-- ===== LAB 5 ===== -->
             <div class="lab-item">
                 <h3>📘 Lab 5 — Room Database</h3>
                 <p><strong>Topic:</strong> Local Persistence with Room</p>
                 <p><strong>What I learned:</strong> Room Database, Entity, DAO, Repository pattern, and offline data storage.</p>
+
+                <!-- Screenshot -->
+                <div class="screenshot-container">
+                    <div class="screenshot-box">
+                        <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/lab5_screenshot.png" alt="Lab 5 Screenshot" />
+                        <p>📸 Lab 5 - Room Database Screenshot</p>
+                    </div>
+                </div>
+
                 <p class="video-link">
                     <a class="link" href="YOUR_LAB5_YOUTUBE_LINK" target="_blank">🎥 Watch Lab 5 Demo →</a>
                 </p>
@@ -312,6 +389,19 @@
 
             <p><strong>Description:</strong> JobHub is a multi-screen job listing application built with Jetpack Compose. It allows users to browse job listings, view job details, and navigate between different screens using Navigation Compose.</p>
             <p><strong>SDG Theme:</strong> SDG 1 — No Poverty</p>
+
+            <!-- Screenshots -->
+            <h3>📸 Screenshots</h3>
+            <div class="screenshot-container">
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project1_home.png" alt="Project 1 Home Screen" />
+                    <p>Home Screen</p>
+                </div>
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project1_detail.png" alt="Project 1 Detail Screen" />
+                    <p>Detail Screen</p>
+                </div>
+            </div>
 
             <h3>📁 GitHub Repository</h3>
             <p>
@@ -361,6 +451,31 @@
                 <span class="skill-tag">GPS / Location</span>
                 <span class="skill-tag">Coroutines &amp; Flow</span>
                 <span class="skill-tag">Material 3</span>
+            </div>
+
+            <!-- Screenshots -->
+            <h3>📸 Screenshots</h3>
+            <div class="screenshot-container">
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project2_home.png" alt="Home Screen" />
+                    <p>Home Screen</p>
+                </div>
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project2_search.png" alt="Search Jobs" />
+                    <p>Search Jobs</p>
+                </div>
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project2_gps.png" alt="Jobs Near Me" />
+                    <p>Jobs Near Me (GPS)</p>
+                </div>
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project2_reviews.png" alt="Company Reviews" />
+                    <p>Company Reviews</p>
+                </div>
+                <div class="screenshot-box">
+                    <img src="https://raw.githubusercontent.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2/main/images/project2_profile.png" alt="Profile Screen" />
+                    <p>Profile Screen</p>
+                </div>
             </div>
 
             <h3>📁 GitHub Repository</h3>
