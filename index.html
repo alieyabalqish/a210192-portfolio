@@ -5,80 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My e-Portfolio - Alieya Balqish A210192</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #f0f4fa;
-            color: #1a1a2e;
+            color: #1a2332;
             line-height: 1.7;
-            padding: 30px;
+            padding: 0;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px 30px;
         }
 
-        /* ===== HEADER ===== */
-        .header {
-            background: linear-gradient(135deg, #0f2b4a, #1a4a6a, #2d6b8a);
+        /* ============================================================ */
+        /* NAVIGATION TABS */
+        /* ============================================================ */
+        .nav-tabs {
+            background: white;
+            padding: 12px 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        .nav-tabs .nav-brand {
+            font-weight: 700;
+            color: #1a3a5c;
+            font-size: 0.85rem;
+            margin-right: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-tabs .nav-brand span {
+            color: #2b6c8c;
+        }
+
+        .nav-tabs a {
+            color: #4a6a7a;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 30px;
+            transition: all 0.25s ease;
+            letter-spacing: 0.2px;
+        }
+
+        .nav-tabs a:hover {
+            background: #e8f0f8;
+            color: #1a3a5c;
+        }
+
+        .nav-tabs a.active {
+            background: #1a3a5c;
             color: white;
-            padding: 60px 40px;
-            border-radius: 28px;
-            margin-bottom: 35px;
+        }
+
+        @media (max-width: 700px) {
+            .nav-tabs {
+                padding: 10px 16px;
+                gap: 4px;
+                top: 5px;
+            }
+            .nav-tabs .nav-brand {
+                font-size: 0.7rem;
+                margin-right: 8px;
+            }
+            .nav-tabs a {
+                font-size: 0.7rem;
+                padding: 4px 10px;
+            }
+        }
+
+        /* ============================================================ */
+        /* HEADER - BIRU PREMIUM */
+        /* ============================================================ */
+        .header {
+            background: linear-gradient(135deg, #0c2340, #1a3a5c, #2b6c8c);
+            color: white;
+            padding: 56px 44px;
+            border-radius: 24px;
+            margin-bottom: 30px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(15, 43, 74, 0.35);
+            box-shadow: 0 20px 50px rgba(12, 35, 64, 0.25);
         }
 
         .header::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(232, 137, 52, 0.08), transparent 70%);
+            top: -40%;
+            right: -15%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(100, 180, 220, 0.07), transparent 70%);
             border-radius: 50%;
         }
 
         .header::after {
             content: '';
             position: absolute;
-            bottom: -30%;
+            bottom: -25%;
             left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(245, 162, 97, 0.06), transparent 70%);
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(60, 140, 190, 0.05), transparent 70%);
             border-radius: 50%;
         }
 
         .header h1 {
-            font-size: 3.2rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             letter-spacing: -0.5px;
             position: relative;
             z-index: 1;
         }
 
         .header h1 span {
-            background: linear-gradient(135deg, #f5a261, #e88934);
+            background: linear-gradient(135deg, #7ec8e3, #4a9fc7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .header p {
-            font-size: 1.2rem;
-            opacity: 0.85;
+            font-size: 1.1rem;
+            opacity: 0.8;
             font-weight: 300;
             position: relative;
             z-index: 1;
@@ -86,199 +160,208 @@
 
         .badge {
             display: inline-block;
-            background: rgba(232, 137, 52, 0.2);
-            border: 1px solid rgba(232, 137, 52, 0.3);
-            padding: 10px 32px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 28px;
             border-radius: 50px;
-            font-size: 0.9rem;
-            margin-top: 14px;
+            font-size: 0.85rem;
+            margin-top: 12px;
             backdrop-filter: blur(8px);
             position: relative;
             z-index: 1;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: #f5cba0;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #c8dce8;
         }
 
-        /* ===== SECTION ===== */
+        /* ============================================================ */
+        /* SECTION */
+        /* ============================================================ */
         .section {
             background: white;
             padding: 32px 36px;
-            border-radius: 24px;
-            margin-bottom: 28px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
             border: 1px solid rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.3s ease;
         }
 
         .section:hover {
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
         }
 
         .section h2 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: #0f2b4a;
-            border-bottom: 4px solid #e88934;
-            padding-bottom: 14px;
-            margin-bottom: 24px;
+            color: #0c2340;
+            border-bottom: 3px solid #d0e4f0;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .section h2 .icon-bg {
-            background: linear-gradient(135deg, #e88934, #f5a261);
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
+            background: #e8f0f8;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
-            color: white;
+            font-size: 1.2rem;
             flex-shrink: 0;
+            color: #1a3a5c;
         }
 
         .section h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: #0f2b4a;
-            margin-top: 16px;
-            margin-bottom: 8px;
+            color: #0c2340;
+            margin-top: 14px;
+            margin-bottom: 6px;
         }
 
         .section h4 {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #1a6b8a;
-            margin-top: 12px;
+            color: #2b6c8c;
+            margin-top: 10px;
             margin-bottom: 4px;
         }
 
         .link {
-            color: #1a6b8a;
+            color: #1a5a7a;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: color 0.2s;
             border-bottom: 2px solid transparent;
         }
 
         .link:hover {
-            color: #e88934;
-            border-bottom-color: #e88934;
+            color: #2b6c8c;
+            border-bottom-color: #7ec8e3;
         }
 
-        /* ===== SKILL TAGS ===== */
+        /* ============================================================ */
+        /* SKILL TAGS - BIRU */
+        /* ============================================================ */
         .skill-tag {
             display: inline-block;
-            background: #e8edf5;
-            color: #0f2b4a;
-            padding: 8px 20px;
+            background: #e8f0f8;
+            color: #1a3a5c;
+            padding: 6px 18px;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
-            margin: 4px 6px 4px 0;
+            margin: 3px 5px 3px 0;
             border: none;
-            transition: all 0.3s ease;
-            letter-spacing: 0.3px;
+            transition: all 0.25s ease;
+            letter-spacing: 0.2px;
         }
 
         .skill-tag:hover {
-            background: linear-gradient(135deg, #e88934, #f5a261);
+            background: #1a3a5c;
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 137, 52, 0.3);
+            box-shadow: 0 6px 20px rgba(26, 58, 92, 0.2);
         }
 
         .skill-category {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .skill-category strong {
-            color: #0f2b4a;
+            color: #0c2340;
             display: block;
-            margin-bottom: 4px;
-            font-size: 0.85rem;
+            margin-bottom: 3px;
+            font-size: 0.82rem;
+            font-weight: 600;
         }
 
-        /* ===== LAB GRID ===== */
+        /* ============================================================ */
+        /* LAB GRID */
+        /* ============================================================ */
         .lab-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 24px;
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .lab-grid-bottom {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            gap: 20px;
         }
 
         .lab-item {
-            background: #f8faff;
-            padding: 24px;
-            border-radius: 18px;
+            background: #f8fafc;
+            padding: 20px 22px;
+            border-radius: 16px;
             border: 1px solid #eef2f7;
-            transition: all 0.35s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
         }
 
         .lab-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 48px rgba(15, 43, 74, 0.10);
-            border-color: #e88934;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(12, 35, 64, 0.06);
+            border-color: #b8d4e8;
         }
 
         .lab-item .lab-number {
             display: inline-block;
-            background: linear-gradient(135deg, #0f2b4a, #1a6b8a);
+            background: #1a3a5c;
             color: white;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
-            padding: 4px 14px;
+            padding: 2px 12px;
             border-radius: 50px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             letter-spacing: 0.5px;
         }
 
         .lab-item h3 {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 700;
-            color: #0f2b4a;
-            margin-bottom: 4px;
+            color: #0c2340;
+            margin-bottom: 2px;
         }
 
         .lab-item p {
-            font-size: 0.85rem;
-            color: #4a5a72;
-            margin: 4px 0;
+            font-size: 0.82rem;
+            color: #4a5a6a;
+            margin: 3px 0;
         }
 
         .lab-item .reflection {
-            font-size: 0.82rem;
-            color: #4a5a72;
-            margin-top: 10px;
-            padding: 12px 16px;
+            font-size: 0.8rem;
+            color: #4a5a6a;
+            margin-top: 8px;
+            padding: 10px 14px;
             background: white;
-            border-radius: 12px;
-            border-left: 4px solid #e88934;
+            border-radius: 10px;
+            border-left: 3px solid #7ec8e3;
             font-style: italic;
             line-height: 1.6;
         }
 
         .lab-item .video-link {
             display: inline-block;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
-        /* ===== SCREENSHOT ===== */
+        /* ============================================================ */
+        /* SCREENSHOT */
+        /* ============================================================ */
         .screenshot-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
-            margin: 10px 0 6px 0;
+            gap: 12px;
+            margin: 8px 0 4px 0;
         }
 
         .screenshot-box {
@@ -287,85 +370,87 @@
 
         .screenshot-box img {
             width: 100%;
-            max-width: 280px;
-            border-radius: 14px;
+            max-width: 260px;
+            border-radius: 12px;
             border: 2px solid #eef2f7;
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-            transition: all 0.35s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
             background: white;
         }
 
         .screenshot-box img:hover {
-            transform: scale(1.03) rotate(-0.5deg);
-            box-shadow: 0 16px 48px rgba(232, 137, 52, 0.15);
-            border-color: #e88934;
+            transform: scale(1.02);
+            box-shadow: 0 8px 32px rgba(26, 58, 92, 0.10);
+            border-color: #7ec8e3;
         }
 
         .screenshot-box p {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: #6a7a8a;
-            margin-top: 6px;
-            letter-spacing: 0.3px;
+            margin-top: 4px;
+            letter-spacing: 0.2px;
         }
 
-        /* ===== PROJECT GRID ===== */
+        /* ============================================================ */
+        /* PROJECT GRID */
+        /* ============================================================ */
         .project-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 28px;
         }
 
         .project-card {
-            background: #f8faff;
-            padding: 28px 30px;
-            border-radius: 20px;
+            background: #f8fafc;
+            padding: 24px 28px;
+            border-radius: 18px;
             border: 1px solid #eef2f7;
-            transition: all 0.35s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
         }
 
         .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 56px rgba(15, 43, 74, 0.10);
-            border-color: #e88934;
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(12, 35, 64, 0.06);
+            border-color: #b8d4e8;
         }
 
         .project-card .project-badge {
             display: inline-block;
-            background: linear-gradient(135deg, #e88934, #f5a261);
+            background: #1a3a5c;
             color: white;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 700;
-            padding: 4px 16px;
+            padding: 3px 14px;
             border-radius: 50px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             letter-spacing: 0.5px;
         }
 
         .project-card h4 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 800;
-            color: #0f2b4a;
-            margin-bottom: 6px;
+            color: #0c2340;
+            margin-bottom: 4px;
         }
 
         .project-card p {
-            font-size: 0.9rem;
-            color: #4a5a72;
+            font-size: 0.88rem;
+            color: #4a5a6a;
             line-height: 1.7;
         }
 
         .project-card .feature-list {
             list-style: none;
             padding: 0;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         .project-card .feature-list li {
-            padding: 4px 0;
-            font-size: 0.85rem;
-            color: #4a5a72;
+            padding: 3px 0;
+            font-size: 0.83rem;
+            color: #4a5a6a;
             border-bottom: none;
             display: flex;
             align-items: center;
@@ -373,73 +458,77 @@
         }
 
         .project-card .feature-list li::before {
-            content: "✦";
-            color: #e88934;
-            font-size: 1.1rem;
+            content: "◆";
+            color: #2b6c8c;
+            font-size: 0.8rem;
         }
 
         .project-card .screenshot-box img {
-            max-width: 320px;
+            max-width: 300px;
         }
 
         .project-card .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
-            margin: 8px 0;
+            gap: 5px;
+            margin: 6px 0;
         }
 
         .project-card .tech-stack .tech-tag {
-            background: #eef2f7;
-            padding: 4px 14px;
+            background: #e8f0f8;
+            padding: 3px 12px;
             border-radius: 50px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
-            color: #1a6b8a;
+            color: #1a5a7a;
         }
 
         .project-links {
             display: flex;
-            gap: 20px;
+            gap: 16px;
             flex-wrap: wrap;
-            margin: 10px 0;
+            margin: 8px 0;
         }
 
         .project-links a {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .reflection-box {
-            margin-top: 14px;
-            padding: 16px 20px;
+            margin-top: 12px;
+            padding: 14px 18px;
             background: white;
-            border-radius: 14px;
-            border-left: 4px solid #e88934;
+            border-radius: 12px;
+            border-left: 3px solid #7ec8e3;
             font-style: italic;
-            color: #4a5a72;
-            font-size: 0.88rem;
+            color: #4a5a6a;
+            font-size: 0.85rem;
             line-height: 1.7;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
         }
 
-        /* ===== PROBLEM STATEMENT BOX ===== */
+        /* ============================================================ */
+        /* PROBLEM STATEMENT BOX */
+        /* ============================================================ */
         .problem-box {
-            background: #fdf6f0;
-            padding: 16px 20px;
-            border-radius: 14px;
-            border-left: 4px solid #e88934;
-            margin: 10px 0;
+            background: #f0f6fa;
+            padding: 14px 18px;
+            border-radius: 12px;
+            border-left: 3px solid #2b6c8c;
+            margin: 8px 0;
         }
 
         .problem-box strong {
-            color: #0f2b4a;
+            color: #0c2340;
         }
 
-        /* ===== FOOTER ===== */
+        /* ============================================================ */
+        /* FOOTER */
+        /* ============================================================ */
         .footer {
             text-align: center;
-            padding: 30px 0 10px;
-            font-size: 0.85rem;
+            padding: 24px 0 10px;
+            font-size: 0.82rem;
             color: #8a9aae;
             border-top: 1px solid #eef2f7;
             margin-top: 10px;
@@ -447,15 +536,17 @@
 
         .footer .footer-name {
             font-weight: 700;
-            color: #0f2b4a;
+            color: #0c2340;
         }
 
         .footer .footer-highlight {
-            color: #e88934;
+            color: #2b6c8c;
             font-weight: 600;
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* ============================================================ */
+        /* RESPONSIVE */
+        /* ============================================================ */
         @media (max-width: 900px) {
             .lab-grid {
                 grid-template-columns: 1fr 1fr;
@@ -467,10 +558,10 @@
                 grid-template-columns: 1fr;
             }
             .screenshot-box img {
-                max-width: 220px;
+                max-width: 200px;
             }
             .project-card .screenshot-box img {
-                max-width: 260px;
+                max-width: 240px;
             }
         }
 
@@ -481,27 +572,69 @@
             .lab-grid-bottom {
                 grid-template-columns: 1fr;
             }
+            .container {
+                padding: 10px 14px;
+            }
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             .header {
-                padding: 40px 20px;
+                padding: 32px 20px;
             }
             .section {
-                padding: 20px;
+                padding: 18px 16px;
             }
             .screenshot-box img {
-                max-width: 180px;
+                max-width: 160px;
             }
             .project-card .screenshot-box img {
-                max-width: 200px;
+                max-width: 180px;
             }
+            .project-card {
+                padding: 18px 16px;
+            }
+            .nav-tabs .nav-brand {
+                display: none;
+            }
+        }
+
+        /* ============================================================ */
+        /* ANIMATION SCROLL */
+        /* ============================================================ */
+        .section {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.05s; }
+        .section:nth-child(2) { animation-delay: 0.10s; }
+        .section:nth-child(3) { animation-delay: 0.15s; }
+        .section:nth-child(4) { animation-delay: 0.20s; }
+        .section:nth-child(5) { animation-delay: 0.25s; }
+        .section:nth-child(6) { animation-delay: 0.30s; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+
+        <!-- ============================================================ -->
+        <!-- NAVIGATION TABS -->
+        <!-- ============================================================ -->
+        <nav class="nav-tabs">
+            <span class="nav-brand">📱 <span>e-Portfolio</span></span>
+            <a href="#profile">Profile</a>
+            <a href="#skills">Skills</a>
+            <a href="#labs">Labs</a>
+            <a href="#projects">Projects</a>
+            <a href="#reflection">Reflection</a>
+            <a href="#resources">Resources</a>
+        </nav>
 
         <!-- ============================================================ -->
         <!-- HEADER -->
@@ -513,9 +646,9 @@
         </header>
 
         <!-- ============================================================ -->
-        <!-- STUDENT PROFILE (Lengkap) -->
+        <!-- STUDENT PROFILE -->
         <!-- ============================================================ -->
-        <section class="section">
+        <section class="section" id="profile">
             <h2>
                 <span class="icon-bg">👤</span>
                 Student Profile
@@ -523,24 +656,24 @@
 
             <p><strong>Name:</strong> Alieya Balqish</p>
             <p><strong>Matric No.:</strong> A210192</p>
-            <p><strong>Programme:</strong> Bachelor of Computer Science</p>
+            <p><strong>Programme:</strong> Bachelor of Information Technology</p>
             <p><strong>Instructor:</strong> Dr. Niza</p>
-            <p><strong>SDG Theme:</strong> <strong style="color:#e88934;">SDG 1</strong> — No Poverty</p>
+            <p><strong>SDG Theme:</strong> <strong style="color:#2b6c8c;">SDG 1</strong> — No Poverty</p>
 
-            <h3 style="margin-top: 16px;">📖 Introduction & Learning Goals</h3>
-            <p style="color: #4a5a72;">I am a Computer Science student with a strong passion for mobile application development. This e-Portfolio documents my learning journey in Mobile Programming, where I have transitioned from building basic UI components to creating fully functional, multi-screen applications with data persistence, API integration, and hardware sensor capabilities.</p>
+            <h3 style="margin-top: 14px;">📖 Introduction & Learning Goals</h3>
+            <p style="color: #4a5a6a;">I am an Information Technology student with a strong passion for mobile application development. This e-Portfolio documents my learning journey in Mobile Programming, where I have transitioned from building basic UI components to creating fully functional, multi-screen applications with data persistence, API integration, and hardware sensor capabilities.</p>
 
-            <p style="color: #4a5a72; margin-top: 8px;"><strong>Learning Goals:</strong></p>
-            <ul style="list-style: none; padding: 0; color: #4a5a72;">
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Master Jetpack Compose for modern Android UI development</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Implement local data persistence using Room Database</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Integrate REST APIs using Retrofit</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Utilize cloud storage with Firebase Firestore</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Leverage mobile hardware sensors (GPS/Location)</li>
+            <p style="color: #4a5a6a; margin-top: 6px;"><strong>Learning Goals:</strong></p>
+            <ul style="list-style: none; padding: 0; color: #4a5a6a;">
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Master Jetpack Compose for modern Android UI development</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Implement local data persistence using Room Database</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Integrate REST APIs using Retrofit</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Utilize cloud storage with Firebase Firestore</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Leverage mobile hardware sensors (GPS/Location)</li>
             </ul>
 
-            <h3 style="margin-top: 16px;">🎯 SDG Statement</h3>
-            <p style="color: #4a5a72; font-style: italic; background: #fdf6f0; padding: 12px 16px; border-radius: 12px; border-left: 4px solid #e88934;">
+            <h3 style="margin-top: 14px;">🎯 SDG Statement</h3>
+            <p style="color: #4a5a6a; font-style: italic; background: #f0f6fa; padding: 12px 16px; border-radius: 10px; border-left: 3px solid #2b6c8c;">
                 "Connecting talent with opportunities — building a better future through meaningful work. This project supports <strong>SDG 1 (No Poverty)</strong> by providing accessible job opportunities and empowering individuals to achieve financial stability."
             </p>
         </section>
@@ -548,12 +681,12 @@
         <!-- ============================================================ -->
         <!-- SKILLS & TECH STACK -->
         <!-- ============================================================ -->
-        <section class="section">
+        <section class="section" id="skills">
             <h2>
                 <span class="icon-bg">🔧</span>
                 Skills & Tech Stack
             </h2>
-            <p style="color: #4a5a72; margin-bottom: 12px;">Technologies I can confidently use:</p>
+            <p style="color: #4a5a6a; margin-bottom: 10px;">Technologies I can confidently use:</p>
 
             <div class="skill-category">
                 <strong>📱 Mobile Development</strong>
@@ -591,9 +724,9 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- LAB SUBMISSIONS (Lab 1-5) -->
+        <!-- LAB SUBMISSIONS -->
         <!-- ============================================================ -->
-        <section class="section">
+        <section class="section" id="labs">
             <h2>
                 <span class="icon-bg">📚</span>
                 Lab Submissions
@@ -702,15 +835,15 @@
 
             </div><!-- end lab-grid-bottom -->
 
-            <p style="margin-top: 20px; font-size: 0.85rem; color: #8a9aae; text-align: center;">
+            <p style="margin-top: 16px; font-size: 0.82rem; color: #8a9aae; text-align: center;">
                 📹 All videos uploaded to YouTube as <strong>Unlisted</strong>.
             </p>
         </section>
 
         <!-- ============================================================ -->
-        <!-- PROJECT SUBMISSIONS (Project 1 & 2) -->
+        <!-- PROJECT SUBMISSIONS -->
         <!-- ============================================================ -->
-        <section class="section">
+        <section class="section" id="projects">
             <h2>
                 <span class="icon-bg">📱</span>
                 Project Submissions
@@ -718,17 +851,17 @@
 
             <div class="project-grid">
 
-                <!-- ===== PROJECT 1 ===== -->
+                <!-- PROJECT 1 -->
                 <div class="project-card">
                     <span class="project-badge">PROJECT 01</span>
                     <h4>JobHub</h4>
 
-                    <h4 style="font-size: 0.95rem; margin-top: 8px;">📌 Problem Statement</h4>
+                    <h4 style="font-size: 0.9rem; margin-top: 6px;">📌 Problem Statement</h4>
                     <div class="problem-box">
                         <p>Many job seekers struggle to find relevant job opportunities due to scattered information across multiple platforms. <strong>JobHub</strong> addresses this by providing a centralized, user-friendly mobile application that aggregates job listings, allowing users to browse, search, and view detailed job information all in one place.</p>
                     </div>
 
-                    <p><strong>SDG Theme:</strong> <strong style="color:#e88934;">SDG 1</strong> — No Poverty</p>
+                    <p><strong>SDG Theme:</strong> <strong style="color:#2b6c8c;">SDG 1</strong> — No Poverty</p>
 
                     <div class="screenshot-container">
                         <div class="screenshot-box">
@@ -742,7 +875,7 @@
                         <a class="link" href="https://youtu.be/xJ3Xn62d5Wk" target="_blank">🎥 Watch VSR →</a>
                     </div>
 
-                    <h4 style="margin-top: 12px; font-size: 0.95rem;">📝 Lessons Learned</h4>
+                    <h4 style="margin-top: 10px; font-size: 0.9rem;">📝 Lessons Learned</h4>
                     <ul class="feature-list">
                         <li>Built a multi-screen application using Jetpack Compose</li>
                         <li>Implemented navigation between screens with NavHost</li>
@@ -756,17 +889,17 @@
                     </div>
                 </div>
 
-                <!-- ===== PROJECT 2 ===== -->
+                <!-- PROJECT 2 -->
                 <div class="project-card">
                     <span class="project-badge">PROJECT 02</span>
                     <h4>KerjaNow</h4>
 
-                    <h4 style="font-size: 0.95rem; margin-top: 8px;">📌 Problem Statement</h4>
+                    <h4 style="font-size: 0.9rem; margin-top: 6px;">📌 Problem Statement</h4>
                     <div class="problem-box">
                         <p>Job seekers often lack access to real-time job listings, personalized job recommendations based on location, and a platform to manage applications efficiently. <strong>KerjaNow</strong> solves this by integrating live job data from external APIs, GPS-based job discovery, local job saving (Room), community reviews (Firebase), and direct chat with employers.</p>
                     </div>
 
-                    <p><strong>SDG Theme:</strong> <strong style="color:#e88934;">SDG 1</strong> — No Poverty</p>
+                    <p><strong>SDG Theme:</strong> <strong style="color:#2b6c8c;">SDG 1</strong> — No Poverty</p>
 
                     <div class="tech-stack">
                         <span class="tech-tag">Kotlin</span>
@@ -789,7 +922,7 @@
                         <a class="link" href="YOUR_PROJECT2_YOUTUBE_LINK" target="_blank">🎥 Watch VSR →</a>
                     </div>
 
-                    <h4 style="margin-top: 12px; font-size: 0.95rem;">✅ Features Implemented (4 Pillars)</h4>
+                    <h4 style="margin-top: 10px; font-size: 0.9rem;">✅ Features Implemented (4 Pillars)</h4>
                     <ul class="feature-list">
                         <li><strong>📡 REST API:</strong> Live job listings from Glints API via Retrofit</li>
                         <li><strong>📍 GPS / Location:</strong> Find jobs within 50km of user location</li>
@@ -810,52 +943,52 @@
         <!-- ============================================================ -->
         <!-- REFLECTION & LEARNING JOURNEY -->
         <!-- ============================================================ -->
-        <section class="section">
+        <section class="section" id="reflection">
             <h2>
                 <span class="icon-bg">🌱</span>
                 Reflection & Learning Journey
             </h2>
 
             <h3>📈 Growth from Lab 1 to Project 2</h3>
-            <p style="color: #4a5a72;">My journey through this course has been transformative. Here's how I've grown:</p>
+            <p style="color: #4a5a6a;">My journey through this course has been transformative. Here's how I've grown:</p>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0;">
-                <div style="background: #f8faff; padding: 16px 20px; border-radius: 14px; border-left: 4px solid #e88934;">
-                    <strong style="color: #0f2b4a;">🔹 Lab 1-2: Foundations</strong>
-                    <p style="font-size: 0.85rem; color: #4a5a72; margin-top: 4px;">Started with basic UI components and state management. Learned how to build interactive screens with Jetpack Compose.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 10px 0;">
+                <div style="background: #f8fafc; padding: 14px 18px; border-radius: 12px; border-left: 3px solid #2b6c8c;">
+                    <strong style="color: #0c2340;">🔹 Lab 1-2: Foundations</strong>
+                    <p style="font-size: 0.82rem; color: #4a5a6a; margin-top: 3px;">Started with basic UI components and state management. Learned how to build interactive screens with Jetpack Compose.</p>
                 </div>
-                <div style="background: #f8faff; padding: 16px 20px; border-radius: 14px; border-left: 4px solid #e88934;">
-                    <strong style="color: #0f2b4a;">🔹 Lab 3-4: Design & Navigation</strong>
-                    <p style="font-size: 0.85rem; color: #4a5a72; margin-top: 4px;">Explored Material Design 3 and implemented multi-screen navigation with NavHost and BottomNavigation.</p>
+                <div style="background: #f8fafc; padding: 14px 18px; border-radius: 12px; border-left: 3px solid #2b6c8c;">
+                    <strong style="color: #0c2340;">🔹 Lab 3-4: Design & Navigation</strong>
+                    <p style="font-size: 0.82rem; color: #4a5a6a; margin-top: 3px;">Explored Material Design 3 and implemented multi-screen navigation with NavHost and BottomNavigation.</p>
                 </div>
-                <div style="background: #f8faff; padding: 16px 20px; border-radius: 14px; border-left: 4px solid #e88934;">
-                    <strong style="color: #0f2b4a;">🔹 Lab 5: Local Persistence</strong>
-                    <p style="font-size: 0.85rem; color: #4a5a72; margin-top: 4px;">Learned Room Database for offline data storage. Created Entities, DAOs, and implemented Repository pattern.</p>
+                <div style="background: #f8fafc; padding: 14px 18px; border-radius: 12px; border-left: 3px solid #2b6c8c;">
+                    <strong style="color: #0c2340;">🔹 Lab 5: Local Persistence</strong>
+                    <p style="font-size: 0.82rem; color: #4a5a6a; margin-top: 3px;">Learned Room Database for offline data storage. Created Entities, DAOs, and implemented Repository pattern.</p>
                 </div>
-                <div style="background: #f8faff; padding: 16px 20px; border-radius: 14px; border-left: 4px solid #e88934;">
-                    <strong style="color: #0f2b4a;">🔹 Project 2: Full Integration</strong>
-                    <p style="font-size: 0.85rem; color: #4a5a72; margin-top: 4px;">Combined all skills — API, GPS, Room, Firebase — into a complete, professional-grade mobile application.</p>
+                <div style="background: #f8fafc; padding: 14px 18px; border-radius: 12px; border-left: 3px solid #2b6c8c;">
+                    <strong style="color: #0c2340;">🔹 Project 2: Full Integration</strong>
+                    <p style="font-size: 0.82rem; color: #4a5a6a; margin-top: 3px;">Combined all skills — API, GPS, Room, Firebase — into a complete, professional-grade mobile application.</p>
                 </div>
             </div>
 
             <h3>⚡ Challenges Overcome</h3>
-            <ul style="list-style: none; padding: 0; color: #4a5a72;">
-                <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>API Integration:</strong> Debugging Retrofit calls and handling response data with Coroutines</li>
-                <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>GPS Permissions:</strong> Managing runtime permissions and handling location updates properly</li>
-                <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>State Management:</strong> Managing complex UI states across multiple screens with ViewModel and StateFlow</li>
-                <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>Firebase Integration:</strong> Setting up Firestore and implementing real-time data synchronization</li>
+            <ul style="list-style: none; padding: 0; color: #4a5a6a;">
+                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>API Integration:</strong> Debugging Retrofit calls and handling response data with Coroutines</li>
+                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>GPS Permissions:</strong> Managing runtime permissions and handling location updates properly</li>
+                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>State Management:</strong> Managing complex UI states across multiple screens with ViewModel and StateFlow</li>
+                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">💪 <strong>Firebase Integration:</strong> Setting up Firestore and implementing real-time data synchronization</li>
             </ul>
 
             <h3>🌍 SDG Impact</h3>
-            <p style="color: #4a5a72;">This project directly supports <strong>SDG 1: No Poverty</strong> by:</p>
-            <ul style="list-style: none; padding: 0; color: #4a5a72;">
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Providing accessible job opportunities through a mobile platform</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Enabling users to discover jobs based on their location</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Empowering individuals to achieve financial independence</li>
-                <li style="padding: 4px 0; display: flex; align-items: center; gap: 8px;">✅ Building community through shared company reviews</li>
+            <p style="color: #4a5a6a;">This project directly supports <strong>SDG 1: No Poverty</strong> by:</p>
+            <ul style="list-style: none; padding: 0; color: #4a5a6a;">
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Providing accessible job opportunities through a mobile platform</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Enabling users to discover jobs based on their location</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Empowering individuals to achieve financial independence</li>
+                <li style="padding: 3px 0; display: flex; align-items: center; gap: 8px;">✅ Building community through shared company reviews</li>
             </ul>
 
-            <div class="reflection-box" style="margin-top: 16px;">
+            <div class="reflection-box" style="margin-top: 14px;">
                 <strong>💭 Final Reflection:</strong> This course has equipped me with the skills to build modern, production-ready Android applications. From writing my first Composable function to integrating complex data sources and hardware sensors, I have grown significantly as a developer. I am excited to continue building applications that make a positive impact on society.
             </div>
         </section>
@@ -863,16 +996,16 @@
         <!-- ============================================================ -->
         <!-- RESOURCES & REFERENCES -->
         <!-- ============================================================ -->
-        <section class="section">
+        <section class="section" id="resources">
             <h2>
                 <span class="icon-bg">🔗</span>
                 Resources &amp; References
             </h2>
             <ul style="list-style: none; padding: 0;">
-                <li style="padding: 8px 0; border-bottom: 1px solid #f0f4f8;"><strong>API:</strong> Glints API via Apify</li>
-                <li style="padding: 8px 0; border-bottom: 1px solid #f0f4f8;"><strong>Libraries:</strong> Retrofit, Coil, Accompanist, Room, Firebase</li>
-                <li style="padding: 8px 0; border-bottom: 1px solid #f0f4f8;"><strong>AI Assistance:</strong> Claude AI (code suggestions &amp; debugging)</li>
-                <li style="padding: 8px 0;"><strong>Documentation:</strong> Android Developer Docs, Firebase Docs, Jetpack Compose Docs</li>
+                <li style="padding: 6px 0; border-bottom: 1px solid #f0f4f8;"><strong>API:</strong> Glints API via Apify</li>
+                <li style="padding: 6px 0; border-bottom: 1px solid #f0f4f8;"><strong>Libraries:</strong> Retrofit, Coil, Accompanist, Room, Firebase</li>
+                <li style="padding: 6px 0; border-bottom: 1px solid #f0f4f8;"><strong>AI Assistance:</strong> Claude AI (code suggestions &amp; debugging)</li>
+                <li style="padding: 6px 0;"><strong>Documentation:</strong> Android Developer Docs, Firebase Docs, Jetpack Compose Docs</li>
             </ul>
         </section>
 
@@ -881,10 +1014,33 @@
         <!-- ============================================================ -->
         <footer class="footer">
             &copy; 2026 · <span class="footer-name">Alieya Balqish</span> · A210192 · Mobile Programming Project 2
-            <br><span style="font-size: 0.8rem; color: #aab8c8;">✨ Built with <span class="footer-highlight">❤</span> for TK2323</span>
+            <br><span style="font-size: 0.75rem; color: #aab8c8;">✨ Built with <span class="footer-highlight">❤</span> for TK2323</span>
         </footer>
 
     </div>
+
+    <script>
+        // Active tab highlight on scroll
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-tabs a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
