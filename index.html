@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My e-Portfolio - Alieya Balqish A210192</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -12,352 +14,413 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f4f8;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #f4f6fa;
             color: #1a1a2e;
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.7;
+            padding: 30px;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER PREMIUM ===== */
         .header {
-            background: linear-gradient(135deg, #0f3443, #34e89e);
+            background: linear-gradient(135deg, #0c2340, #1a3a5c, #2d5f7e);
             color: white;
-            padding: 50px 30px;
-            border-radius: 24px;
-            margin-bottom: 30px;
+            padding: 60px 40px;
+            border-radius: 28px;
+            margin-bottom: 35px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(15, 52, 67, 0.3);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(12, 35, 64, 0.35);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.08), transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(52, 232, 158, 0.06), transparent 70%);
+            border-radius: 50%;
         }
 
         .header h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
+            font-weight: 800;
             margin-bottom: 8px;
-            letter-spacing: 1px;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 span {
+            background: linear-gradient(135deg, #f7d875, #f5b041);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .header p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            opacity: 0.85;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
         }
 
         .badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 24px;
-            border-radius: 30px;
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 10px 32px;
+            border-radius: 50px;
             font-size: 0.9rem;
-            margin-top: 12px;
-            backdrop-filter: blur(4px);
+            margin-top: 14px;
+            backdrop-filter: blur(8px);
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .badge i {
+            color: #f7d875;
         }
 
         /* ===== SECTION ===== */
         .section {
             background: white;
-            padding: 28px 32px;
-            border-radius: 20px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s;
+            padding: 32px 36px;
+            border-radius: 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.02);
         }
 
         .section:hover {
-            transform: translateY(-2px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.07);
         }
 
         .section h2 {
-            font-size: 1.5rem;
-            color: #0f3443;
-            border-bottom: 4px solid #34e89e;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0c2340;
+            border-bottom: 4px solid #f7d875;
+            padding-bottom: 14px;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .section h2 .icon-bg {
+            background: linear-gradient(135deg, #f7d875, #f5b041);
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
         }
 
         .section h3 {
             font-size: 1.1rem;
-            color: #0f3443;
+            font-weight: 700;
+            color: #0c2340;
             margin-top: 16px;
             margin-bottom: 8px;
         }
 
         .link {
-            color: #0f3443;
+            color: #1a3a5c;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.2s;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
         }
 
         .link:hover {
-            color: #34e89e;
-            text-decoration: underline;
+            color: #f5b041;
+            border-bottom-color: #f5b041;
         }
 
         /* ===== SKILL TAGS ===== */
         .skill-tag {
             display: inline-block;
-            background: #e8f5e9;
-            color: #0f3443;
-            padding: 6px 16px;
-            border-radius: 30px;
+            background: linear-gradient(135deg, #e8edf5, #dce4ef);
+            color: #0c2340;
+            padding: 8px 20px;
+            border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
             margin: 4px 6px 4px 0;
-            border: 1px solid #c8e6c9;
-            transition: all 0.2s;
+            border: none;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
         }
 
         .skill-tag:hover {
-            background: #34e89e;
-            color: white;
-            border-color: #34e89e;
-            transform: scale(1.05);
+            background: linear-gradient(135deg, #f7d875, #f5b041);
+            color: #0c2340;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 176, 65, 0.3);
         }
 
-        /* ===== LAB GRID (3 ATAS, 2 BAWAH) ===== */
+        /* ===== LAB GRID ===== */
         .lab-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 24px;
+            margin-bottom: 24px;
         }
 
-        .lab-grid .lab-item {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 16px;
-            border-left: 5px solid #34e89e;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        .lab-grid .lab-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(52, 232, 158, 0.15);
-        }
-
-        .lab-grid .lab-item h3 {
-            color: #0f3443;
-            font-size: 1rem;
-            margin-bottom: 6px;
-        }
-
-        .lab-grid .lab-item p {
-            font-size: 0.85rem;
-            color: #4a4a6a;
-            margin: 4px 0;
-        }
-
-        .lab-grid .lab-item .reflection {
-            font-size: 0.82rem;
-            color: #6a6a8a;
-            margin-top: 8px;
-            padding: 10px 14px;
-            background: white;
-            border-radius: 10px;
-            border-left: 3px solid #34e89e;
-            font-style: italic;
-        }
-
-        .lab-grid .lab-item .video-link {
-            display: inline-block;
-            margin-top: 6px;
-        }
-
-        .lab-grid .lab-item .screenshot-box img {
-            width: 100%;
-            max-width: 120px;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s;
-        }
-
-        .lab-grid .lab-item .screenshot-box img:hover {
-            transform: scale(1.05);
-        }
-
-        .lab-grid .lab-item .screenshot-box p {
-            font-size: 0.65rem;
-            color: #6a6a8a;
-            margin-top: 4px;
-        }
-
-        /* ===== LAB 4 & 5 - ROW BAWAH (2 KOLUM) ===== */
         .lab-grid-bottom {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 0;
+            gap: 24px;
         }
 
-        .lab-grid-bottom .lab-item {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 16px;
-            border-left: 5px solid #34e89e;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        .lab-item {
+            background: #f8faff;
+            padding: 24px;
+            border-radius: 18px;
+            border: 1px solid #eef2f7;
+            transition: all 0.35s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
         }
 
-        .lab-grid-bottom .lab-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(52, 232, 158, 0.15);
+        .lab-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(12, 35, 64, 0.10);
+            border-color: #f7d875;
         }
 
-        .lab-grid-bottom .lab-item h3 {
-            color: #0f3443;
-            font-size: 1rem;
-            margin-bottom: 6px;
+        .lab-item .lab-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #0c2340, #1a3a5c);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 50px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
         }
 
-        .lab-grid-bottom .lab-item p {
+        .lab-item h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0c2340;
+            margin-bottom: 4px;
+        }
+
+        .lab-item p {
             font-size: 0.85rem;
-            color: #4a4a6a;
+            color: #4a5a72;
             margin: 4px 0;
         }
 
-        .lab-grid-bottom .lab-item .reflection {
+        .lab-item .reflection {
             font-size: 0.82rem;
-            color: #6a6a8a;
-            margin-top: 8px;
-            padding: 10px 14px;
+            color: #4a5a72;
+            margin-top: 10px;
+            padding: 12px 16px;
             background: white;
-            border-radius: 10px;
-            border-left: 3px solid #34e89e;
+            border-radius: 12px;
+            border-left: 4px solid #f7d875;
             font-style: italic;
+            line-height: 1.6;
         }
 
-        .lab-grid-bottom .lab-item .video-link {
+        .lab-item .video-link {
             display: inline-block;
             margin-top: 6px;
         }
 
-        .lab-grid-bottom .lab-item .screenshot-box img {
-            width: 100%;
-            max-width: 120px;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s;
-        }
-
-        .lab-grid-bottom .lab-item .screenshot-box img:hover {
-            transform: scale(1.05);
-        }
-
-        .lab-grid-bottom .lab-item .screenshot-box p {
-            font-size: 0.65rem;
-            color: #6a6a8a;
-            margin-top: 4px;
-        }
-
+        /* ===== SCREENSHOT - BESAR & CANTIK ===== */
         .screenshot-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 8px 0;
+            gap: 14px;
+            margin: 10px 0 6px 0;
         }
 
         .screenshot-box {
             text-align: center;
         }
 
-        /* ===== PROJECT GRID (2 KOLUM) ===== */
+        .screenshot-box img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 14px;
+            border: 2px solid #eef2f7;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s ease;
+            background: white;
+        }
+
+        .screenshot-box img:hover {
+            transform: scale(1.03) rotate(-0.5deg);
+            box-shadow: 0 16px 48px rgba(12, 35, 64, 0.15);
+            border-color: #f7d875;
+        }
+
+        .screenshot-box p {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #6a7a8a;
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ===== PROJECT GRID ===== */
         .project-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 10px;
+            gap: 30px;
         }
 
         .project-card {
-            background: #f8fafc;
-            padding: 24px;
-            border-radius: 16px;
-            border-left: 5px solid #0f3443;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            background: #f8faff;
+            padding: 28px 30px;
+            border-radius: 20px;
+            border: 1px solid #eef2f7;
+            transition: all 0.35s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
         }
 
         .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 28px rgba(15, 52, 67, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 56px rgba(12, 35, 64, 0.10);
+            border-color: #f7d875;
+        }
+
+        .project-card .project-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f7d875, #f5b041);
+            color: #0c2340;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 50px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
         }
 
         .project-card h4 {
-            font-size: 1.1rem;
-            color: #0f3443;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0c2340;
             margin-bottom: 6px;
         }
 
         .project-card p {
             font-size: 0.9rem;
-            color: #4a4a6a;
-        }
-
-        .project-card .screenshot-box img {
-            width: 100%;
-            max-width: 180px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s;
-        }
-
-        .project-card .screenshot-box img:hover {
-            transform: scale(1.05);
+            color: #4a5a72;
+            line-height: 1.7;
         }
 
         .project-card .feature-list {
             list-style: none;
             padding: 0;
-            margin-top: 8px;
+            margin-top: 6px;
         }
 
         .project-card .feature-list li {
             padding: 4px 0;
             font-size: 0.85rem;
-            color: #4a4a6a;
+            color: #4a5a72;
             border-bottom: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .project-card .feature-list li::before {
-            content: "✅ ";
-            color: #34e89e;
+            content: "✦";
+            color: #f5b041;
+            font-size: 1.1rem;
         }
 
-        /* ===== REFLECTION ===== */
-        .reflection-box {
-            margin-top: 12px;
-            padding: 14px 18px;
-            background: #f8fafc;
-            border-radius: 12px;
-            border-left: 4px solid #34e89e;
-            font-style: italic;
-            color: #4a4a6a;
+        .project-card .screenshot-box img {
+            max-width: 320px;
+        }
+
+        .project-card .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 8px 0;
+        }
+
+        .project-card .tech-stack .tech-tag {
+            background: #eef2f7;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #1a3a5c;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .project-links a {
             font-size: 0.9rem;
+        }
+
+        .reflection-box {
+            margin-top: 14px;
+            padding: 16px 20px;
+            background: white;
+            border-radius: 14px;
+            border-left: 4px solid #f7d875;
+            font-style: italic;
+            color: #4a5a72;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
         }
 
         /* ===== FOOTER ===== */
         .footer {
             text-align: center;
-            padding: 24px 0 10px;
-            font-size: 0.9rem;
-            color: #6a6a8a;
-            border-top: 1px solid #e8edf2;
+            padding: 30px 0 10px;
+            font-size: 0.85rem;
+            color: #8a9aae;
+            border-top: 1px solid #eef2f7;
             margin-top: 10px;
         }
 
+        .footer .footer-name {
+            font-weight: 700;
+            color: #0c2340;
+        }
+
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
             .lab-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -367,9 +430,15 @@
             .project-grid {
                 grid-template-columns: 1fr;
             }
+            .screenshot-box img {
+                max-width: 220px;
+            }
+            .project-card .screenshot-box img {
+                max-width: 260px;
+            }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             .lab-grid {
                 grid-template-columns: 1fr;
             }
@@ -377,21 +446,20 @@
                 grid-template-columns: 1fr;
             }
             .header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
+            }
+            .header {
+                padding: 40px 20px;
+            }
+            .section {
+                padding: 20px;
             }
             .screenshot-box img {
-                width: 100px;
+                max-width: 180px;
             }
-        }
-
-        .lab-section-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .video-link a {
-            font-weight: 600;
+            .project-card .screenshot-box img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -400,10 +468,10 @@
     <div class="container">
 
         <!-- ============================================================ -->
-        <!-- HEADER -->
+        <!-- HEADER PREMIUM -->
         <!-- ============================================================ -->
         <header class="header">
-            <h1>📱 My e-Portfolio</h1>
+            <h1>✨ <span>My e-Portfolio</span></h1>
             <p>Mobile Programming — TK2323 / TM2213</p>
             <span class="badge">📍 A210192 · Alieya Balqish · Dr. Niza</span>
         </header>
@@ -412,20 +480,26 @@
         <!-- STUDENT PROFILE -->
         <!-- ============================================================ -->
         <section class="section">
-            <h2>👤 Student Profile</h2>
+            <h2>
+                <span class="icon-bg">👤</span>
+                Student Profile
+            </h2>
             <p><strong>Name:</strong> Alieya Balqish</p>
             <p><strong>Matric No.:</strong> A210192</p>
             <p><strong>Programme:</strong> Bachelor of Computer Science</p>
             <p><strong>Instructor:</strong> Dr. Niza</p>
-            <p><strong>SDG Theme:</strong> <strong>SDG 1</strong> — No Poverty</p>
-            <p style="margin-top: 8px;"><em>"Connecting talent with opportunities — building a better future through meaningful work."</em></p>
+            <p><strong>SDG Theme:</strong> <strong style="color:#f5b041;">SDG 1</strong> — No Poverty</p>
+            <p style="margin-top: 10px; font-style: italic; color: #4a5a72; font-size: 1.05rem;">"Connecting talent with opportunities — building a better future through meaningful work."</p>
         </section>
 
         <!-- ============================================================ -->
         <!-- SKILLS & TECH STACK -->
         <!-- ============================================================ -->
         <section class="section">
-            <h2>🔧 Skills & Tech Stack</h2>
+            <h2>
+                <span class="icon-bg">🔧</span>
+                Skills & Tech Stack
+            </h2>
             <div style="margin: 8px 0;">
                 <span class="skill-tag">Kotlin</span>
                 <span class="skill-tag">Jetpack Compose</span>
@@ -441,155 +515,155 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- LAB SUBMISSIONS (3 ATAS, 2 BAWAH) -->
+        <!-- LAB SUBMISSIONS -->
         <!-- ============================================================ -->
         <section class="section">
-            <h2>📚 Lab Submissions</h2>
+            <h2>
+                <span class="icon-bg">📚</span>
+                Lab Submissions
+            </h2>
 
-            <div class="lab-section-wrapper">
+            <!-- ROW 1: LAB 1,2,3 -->
+            <div class="lab-grid">
 
-                <!-- ===== ROW 1: LAB 1, 2, 3 (3 KOLUM) ===== -->
-                <div class="lab-grid">
-
-                    <!-- LAB 1 -->
-                    <div class="lab-item">
-                        <h3>📘 Lab 1 — UI</h3>
-                        <p><strong>Topic:</strong> User Interface with Jetpack Compose</p>
-                        <p><strong>What I learned:</strong> Column, Row, Box layouts, Text, Image, Button, and Material Design components.</p>
-                        <div class="screenshot-container">
-                            <div class="screenshot-box">
-                                <img src="lab1_screenshot.png" alt="Lab 1 Screenshot" />
-                                <p>📸 Lab 1 - UI Screenshot</p>
-                            </div>
-                        </div>
-                        <p class="video-link">
-                            <a class="link" href="https://youtu.be/BnOxRomwGN8" target="_blank">🎥 Watch Lab 1 Demo →</a>
-                        </p>
-                        <div class="reflection">
-                            <strong>💭 Reflection:</strong> In this lab, I learned the fundamentals of Jetpack Compose UI. I practiced building layouts using Column, Row, and Box. I also learned how to use Material Design components like Buttons, TextFields, and Cards. This lab gave me a strong foundation for building the UI of my project.
+                <div class="lab-item">
+                    <span class="lab-number">LAB 01</span>
+                    <h3>📘 UI</h3>
+                    <p><strong>Topic:</strong> User Interface with Jetpack Compose</p>
+                    <p><strong>What I learned:</strong> Column, Row, Box layouts, Text, Image, Button, and Material Design components.</p>
+                    <div class="screenshot-container">
+                        <div class="screenshot-box">
+                            <img src="lab1_screenshot.png" alt="Lab 1 Screenshot" />
+                            <p>📸 Lab 1 - UI Screenshot</p>
                         </div>
                     </div>
+                    <p class="video-link">
+                        <a class="link" href="https://youtu.be/BnOxRomwGN8" target="_blank">🎥 Watch Lab 1 Demo →</a>
+                    </p>
+                    <div class="reflection">
+                        <strong>💭 Reflection:</strong> In this lab, I learned the fundamentals of Jetpack Compose UI. I practiced building layouts using Column, Row, and Box. I also learned how to use Material Design components like Buttons, TextFields, and Cards. This lab gave me a strong foundation for building the UI of my project.
+                    </div>
+                </div>
 
-                    <!-- LAB 2 -->
-                    <div class="lab-item">
-                        <h3>📘 Lab 2 — Interaction</h3>
-                        <p><strong>Topic:</strong> User Interaction &amp; State Management</p>
-                        <p><strong>What I learned:</strong> State management with remember and mutableStateOf, handling button clicks, text input, and UI updates.</p>
-                        <div class="screenshot-container">
-                            <div class="screenshot-box">
-                                <img src="lab2_screenshot.png" alt="Lab 2 Screenshot" />
-                                <p>📸 Lab 2 - Interaction Screenshot</p>
-                            </div>
-                        </div>
-                        <p class="video-link">
-                            <a class="link" href="https://youtu.be/pkzu2MRBL50" target="_blank">🎥 Watch Lab 2 Demo →</a>
-                        </p>
-                        <div class="reflection">
-                            <strong>💭 Reflection:</strong> In this lab, I learned how to manage state in Compose using remember and mutableStateOf. I practiced handling user interactions like button clicks, text input changes, and updating the UI dynamically. This is crucial for building interactive applications.
+                <div class="lab-item">
+                    <span class="lab-number">LAB 02</span>
+                    <h3>📘 Interaction</h3>
+                    <p><strong>Topic:</strong> User Interaction &amp; State Management</p>
+                    <p><strong>What I learned:</strong> State management with remember and mutableStateOf, handling button clicks, text input, and UI updates.</p>
+                    <div class="screenshot-container">
+                        <div class="screenshot-box">
+                            <img src="lab2_screenshot.png" alt="Lab 2 Screenshot" />
+                            <p>📸 Lab 2 - Interaction Screenshot</p>
                         </div>
                     </div>
+                    <p class="video-link">
+                        <a class="link" href="https://youtu.be/pkzu2MRBL50" target="_blank">🎥 Watch Lab 2 Demo →</a>
+                    </p>
+                    <div class="reflection">
+                        <strong>💭 Reflection:</strong> In this lab, I learned how to manage state in Compose using remember and mutableStateOf. I practiced handling user interactions like button clicks, text input changes, and updating the UI dynamically. This is crucial for building interactive applications.
+                    </div>
+                </div>
 
-                    <!-- LAB 3 -->
-                    <div class="lab-item">
-                        <h3>📘 Lab 3 — Material Design</h3>
-                        <p><strong>Topic:</strong> Material Design 3 Components</p>
-                        <p><strong>What I learned:</strong> Cards, Chips, FloatingActionButton, BottomNavigation, and theming with Material 3.</p>
-                        <div class="screenshot-container">
-                            <div class="screenshot-box">
-                                <img src="lab3_screenshot.png" alt="Lab 3 Screenshot" />
-                                <p>📸 Lab 3 - Material Design Screenshot</p>
-                            </div>
-                        </div>
-                        <p class="video-link">
-                            <a class="link" href="https://youtu.be/PyitejrOVFA" target="_blank">🎥 Watch Lab 3 Demo →</a>
-                        </p>
-                        <div class="reflection">
-                            <strong>💭 Reflection:</strong> In this lab, I explored Material Design 3 components. I learned how to use Cards to display content, Chips for filtering, FloatingActionButton for primary actions, and BottomNavigation for app navigation. I also learned about theming and colors.
+                <div class="lab-item">
+                    <span class="lab-number">LAB 03</span>
+                    <h3>📘 Material Design</h3>
+                    <p><strong>Topic:</strong> Material Design 3 Components</p>
+                    <p><strong>What I learned:</strong> Cards, Chips, FloatingActionButton, BottomNavigation, and theming with Material 3.</p>
+                    <div class="screenshot-container">
+                        <div class="screenshot-box">
+                            <img src="lab3_screenshot.png" alt="Lab 3 Screenshot" />
+                            <p>📸 Lab 3 - Material Design Screenshot</p>
                         </div>
                     </div>
+                    <p class="video-link">
+                        <a class="link" href="https://youtu.be/PyitejrOVFA" target="_blank">🎥 Watch Lab 3 Demo →</a>
+                    </p>
+                    <div class="reflection">
+                        <strong>💭 Reflection:</strong> In this lab, I explored Material Design 3 components. I learned how to use Cards to display content, Chips for filtering, FloatingActionButton for primary actions, and BottomNavigation for app navigation. I also learned about theming and colors.
+                    </div>
+                </div>
 
-                </div><!-- end lab-grid -->
+            </div><!-- end lab-grid -->
 
-                <!-- ===== ROW 2: LAB 4 & 5 (2 KOLUM) ===== -->
-                <div class="lab-grid-bottom">
+            <!-- ROW 2: LAB 4,5 -->
+            <div class="lab-grid-bottom">
 
-                    <!-- LAB 4 -->
-                    <div class="lab-item">
-                        <h3>📘 Lab 4 — Navigation</h3>
-                        <p><strong>Topic:</strong> Navigation with Jetpack Compose</p>
-                        <p><strong>What I learned:</strong> NavHost, composable routes, passing arguments between screens, and BottomNavigation.</p>
-                        <div class="screenshot-container">
-                            <div class="screenshot-box">
-                                <img src="lab4_screenshot.png" alt="Lab 4 Screenshot" />
-                                <p>📸 Lab 4 - Navigation Screenshot</p>
-                            </div>
-                        </div>
-                        <p class="video-link">
-                            <a class="link" href="https://youtu.be/YZzPAbiAY8g" target="_blank">🎥 Watch Lab 4 Demo →</a>
-                        </p>
-                        <div class="reflection">
-                            <strong>💭 Reflection:</strong> In this lab, I learned how to implement navigation in Compose using NavHost and NavController. I practiced defining routes, navigating between screens, passing arguments, and implementing BottomNavigation. This is essential for multi-screen apps.
+                <div class="lab-item">
+                    <span class="lab-number">LAB 04</span>
+                    <h3>📘 Navigation</h3>
+                    <p><strong>Topic:</strong> Navigation with Jetpack Compose</p>
+                    <p><strong>What I learned:</strong> NavHost, composable routes, passing arguments between screens, and BottomNavigation.</p>
+                    <div class="screenshot-container">
+                        <div class="screenshot-box">
+                            <img src="lab4_screenshot.png" alt="Lab 4 Screenshot" />
+                            <p>📸 Lab 4 - Navigation Screenshot</p>
                         </div>
                     </div>
+                    <p class="video-link">
+                        <a class="link" href="https://youtu.be/YZzPAbiAY8g" target="_blank">🎥 Watch Lab 4 Demo →</a>
+                    </p>
+                    <div class="reflection">
+                        <strong>💭 Reflection:</strong> In this lab, I learned how to implement navigation in Compose using NavHost and NavController. I practiced defining routes, navigating between screens, passing arguments, and implementing BottomNavigation. This is essential for multi-screen apps.
+                    </div>
+                </div>
 
-                    <!-- LAB 5 -->
-                    <div class="lab-item">
-                        <h3>📘 Lab 5 — Room Database</h3>
-                        <p><strong>Topic:</strong> Local Persistence with Room</p>
-                        <p><strong>What I learned:</strong> Room Database, Entity, DAO, Repository pattern, and offline data storage.</p>
-                        <div class="screenshot-container">
-                            <div class="screenshot-box">
-                                <img src="lab5_screenshot.png" alt="Lab 5 Screenshot" />
-                                <p>📸 Lab 5 - Room Database Screenshot</p>
-                            </div>
-                        </div>
-                        <p class="video-link">
-                            <a class="link" href="https://youtu.be/rHpOqtmu0WY" target="_blank">🎥 Watch Lab 5 Demo →</a>
-                        </p>
-                        <div class="reflection">
-                            <strong>💭 Reflection:</strong> In this lab, I learned about Room Database for local persistence. I created Entity classes, DAO interfaces for database operations, and implemented the Repository pattern. I learned how to save and retrieve data offline, which is important for apps that need to work without internet.
+                <div class="lab-item">
+                    <span class="lab-number">LAB 05</span>
+                    <h3>📘 Room Database</h3>
+                    <p><strong>Topic:</strong> Local Persistence with Room</p>
+                    <p><strong>What I learned:</strong> Room Database, Entity, DAO, Repository pattern, and offline data storage.</p>
+                    <div class="screenshot-container">
+                        <div class="screenshot-box">
+                            <img src="lab5_screenshot.png" alt="Lab 5 Screenshot" />
+                            <p>📸 Lab 5 - Room Database Screenshot</p>
                         </div>
                     </div>
+                    <p class="video-link">
+                        <a class="link" href="https://youtu.be/rHpOqtmu0WY" target="_blank">🎥 Watch Lab 5 Demo →</a>
+                    </p>
+                    <div class="reflection">
+                        <strong>💭 Reflection:</strong> In this lab, I learned about Room Database for local persistence. I created Entity classes, DAO interfaces for database operations, and implemented the Repository pattern. I learned how to save and retrieve data offline, which is important for apps that need to work without internet.
+                    </div>
+                </div>
 
-                </div><!-- end lab-grid-bottom -->
+            </div><!-- end lab-grid-bottom -->
 
-            </div><!-- end lab-section-wrapper -->
-
-            <p style="margin-top: 16px; font-size: 0.9rem; color: #6a6a8a; text-align: center;">
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #8a9aae; text-align: center;">
                 📹 All videos uploaded to YouTube as <strong>Unlisted</strong>.
             </p>
         </section>
 
         <!-- ============================================================ -->
-        <!-- PROJECT 1 & 2 (2 KOLUM) -->
+        <!-- PROJECTS -->
         <!-- ============================================================ -->
         <section class="section">
-            <h2>📱 Projects</h2>
+            <h2>
+                <span class="icon-bg">📱</span>
+                Projects
+            </h2>
 
             <div class="project-grid">
 
                 <!-- PROJECT 1 -->
                 <div class="project-card">
-                    <h4>📱 Project 1 — JobHub</h4>
+                    <span class="project-badge">PROJECT 01</span>
+                    <h4>JobHub</h4>
                     <p><strong>Description:</strong> JobHub is a multi-screen job listing application built with Jetpack Compose. It allows users to browse job listings, view job details, and navigate between different screens using Navigation Compose.</p>
-                    <p><strong>SDG Theme:</strong> SDG 1 — No Poverty</p>
+                    <p><strong>SDG Theme:</strong> <strong style="color:#f5b041;">SDG 1</strong> — No Poverty</p>
 
-                    <h4 style="margin-top: 10px; font-size: 0.95rem;">📸 Screenshots</h4>
                     <div class="screenshot-container">
                         <div class="screenshot-box">
                             <img src="project1_home.png" alt="Project 1 Home Screen" />
-                            <p>Home Screen</p>
+                            <p>🏠 Home Screen</p>
                         </div>
                     </div>
 
-                    <p style="margin-top: 8px;">
+                    <div class="project-links">
                         <a class="link" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project1" target="_blank">🔗 View Code →</a>
-                    </p>
-                    <p>
-                        <a class="link" href="https://youtu.be/xJ3Xn62d5Wk" target="_blank">🎥 Watch Project 1 VSR →</a>
-                    </p>
+                        <a class="link" href="https://youtu.be/xJ3Xn62d5Wk" target="_blank">🎥 Watch VSR →</a>
+                    </div>
 
-                    <h4 style="margin-top: 10px; font-size: 0.95rem;">📝 Lessons Learned</h4>
+                    <h4 style="margin-top: 12px; font-size: 0.95rem;">📝 Lessons Learned</h4>
                     <ul class="feature-list">
                         <li>Built a multi-screen application using Jetpack Compose</li>
                         <li>Implemented navigation between screens</li>
@@ -605,37 +679,33 @@
 
                 <!-- PROJECT 2 -->
                 <div class="project-card">
-                    <h4>📱 Project 2 — KerjaNow</h4>
-                    <p><strong>App Name:</strong> KerjaNow</p>
-                    <p><strong>SDG Theme:</strong> SDG 1 — No Poverty</p>
+                    <span class="project-badge">PROJECT 02</span>
+                    <h4>KerjaNow</h4>
                     <p><strong>Description:</strong> KerjaNow is a mobile job search application that helps users find job opportunities, apply with resumes, share company reviews, and connect with employers. Built with Jetpack Compose, it integrates Room Database, Firebase Firestore, and real-time APIs.</p>
+                    <p><strong>SDG Theme:</strong> <strong style="color:#f5b041;">SDG 1</strong> — No Poverty</p>
 
-                    <h4 style="margin-top: 10px; font-size: 0.95rem;">🔧 Tech Stack</h4>
-                    <div style="margin: 6px 0;">
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">Jetpack Compose</span>
-                        <span class="skill-tag">Room Database</span>
-                        <span class="skill-tag">Firebase Firestore</span>
-                        <span class="skill-tag">Retrofit</span>
-                        <span class="skill-tag">GPS / Location</span>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">Room</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Retrofit</span>
+                        <span class="tech-tag">GPS</span>
                     </div>
 
-                    <h4 style="margin-top: 10px; font-size: 0.95rem;">📸 Screenshots</h4>
                     <div class="screenshot-container">
                         <div class="screenshot-box">
                             <img src="project2_home.png" alt="Home Screen" />
-                            <p>Home Screen</p>
+                            <p>🏠 Home Screen</p>
                         </div>
                     </div>
 
-                    <p style="margin-top: 8px;">
-                        <a class="link" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2" target="_blank">🔗 View Full Code →</a>
-                    </p>
-                    <p>
-                        <a class="link" href="YOUR_PROJECT2_YOUTUBE_LINK" target="_blank">🎥 Watch Project 2 VSR →</a>
-                    </p>
+                    <div class="project-links">
+                        <a class="link" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2" target="_blank">🔗 View Code →</a>
+                        <a class="link" href="YOUR_PROJECT2_YOUTUBE_LINK" target="_blank">🎥 Watch VSR →</a>
+                    </div>
 
-                    <h4 style="margin-top: 10px; font-size: 0.95rem;">✅ Features Implemented</h4>
+                    <h4 style="margin-top: 12px; font-size: 0.95rem;">✅ Features Implemented</h4>
                     <ul class="feature-list">
                         <li>REST API - Live job listings from Glints API via Retrofit</li>
                         <li>GPS / Location - Find jobs within 50km of user location</li>
@@ -657,12 +727,15 @@
         <!-- RESOURCES & REFERENCES -->
         <!-- ============================================================ -->
         <section class="section">
-            <h2>🔗 Resources &amp; References</h2>
+            <h2>
+                <span class="icon-bg">🔗</span>
+                Resources &amp; References
+            </h2>
             <ul style="list-style: none; padding: 0;">
-                <li style="padding: 6px 0; border-bottom: 1px solid #f0f4f8;"><strong>API:</strong> Glints API via Apify</li>
-                <li style="padding: 6px 0; border-bottom: 1px solid #f0f4f8;"><strong>Libraries:</strong> Retrofit, Coil, Accompanist, Room, Firebase</li>
-                <li style="padding: 6px 0; border-bottom: 1px solid #f0f4f8;"><strong>AI Assistance:</strong> Claude AI (code suggestions &amp; debugging)</li>
-                <li style="padding: 6px 0;"><strong>Documentation:</strong> Android Developer Docs, Firebase Docs</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f4f8;"><strong>API:</strong> Glints API via Apify</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f4f8;"><strong>Libraries:</strong> Retrofit, Coil, Accompanist, Room, Firebase</li>
+                <li style="padding: 8px 0; border-bottom: 1px solid #f0f4f8;"><strong>AI Assistance:</strong> Claude AI (code suggestions &amp; debugging)</li>
+                <li style="padding: 8px 0;"><strong>Documentation:</strong> Android Developer Docs, Firebase Docs</li>
             </ul>
         </section>
 
@@ -670,7 +743,7 @@
         <!-- FOOTER -->
         <!-- ============================================================ -->
         <footer class="footer">
-            &copy; 2026 Alieya Balqish · A210192 · Mobile Programming Project 2
+            &copy; 2026 · <span class="footer-name">Alieya Balqish</span> · A210192 · Mobile Programming Project 2
         </footer>
 
     </div>
