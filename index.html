@@ -287,19 +287,6 @@
             margin-bottom: 4px;
         }
 
-        .link {
-            color: #1a5a7a;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-            border-bottom: 2px solid transparent;
-        }
-
-        .link:hover {
-            color: #2b6c8c;
-            border-bottom-color: #7ec8e3;
-        }
-
         /* ============================================================ */
         /* SKILL TAGS */
         /* ============================================================ */
@@ -404,32 +391,40 @@
             line-height: 1.6;
         }
 
-        /* ===== BUTTON YOUTUBE UNTUK LAB ===== */
-        .btn-youtube-lab {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #ff0000;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        /* ===== YOUTUBE EMBED VIDEO ===== */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 8px 0 6px 0;
+            background: #000;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
-            margin-top: 4px;
+            border-radius: 12px;
         }
 
-        .btn-youtube-lab:hover {
-            background: #cc0000;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
-            color: white;
+        .video-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #ff0000;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .btn-youtube-lab .play-icon {
-            font-size: 0.9rem;
+        .video-label .play-icon {
+            font-size: 0.8rem;
         }
 
         /* ============================================================ */
@@ -588,29 +583,6 @@
             background: #1a1e22;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            color: white;
-        }
-
-        /* ===== BUTTON YOUTUBE UNTUK PROJECT - BIRU ===== */
-        .btn-youtube {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #1a3a5c;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-        }
-
-        .btn-youtube:hover {
-            background: #2b6c8c;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 58, 92, 0.3);
             color: white;
         }
 
@@ -780,6 +752,9 @@
             .project-card .screenshot-box img {
                 max-width: 320px;
             }
+            .video-wrapper {
+                padding-bottom: 56.25%;
+            }
         }
 
         @media (max-width: 600px) {
@@ -812,14 +787,12 @@
             .project-card {
                 padding: 18px 16px;
             }
-            .btn-github,
-            .btn-youtube {
+            .btn-github {
                 padding: 6px 14px;
                 font-size: 0.7rem;
             }
-            .btn-youtube-lab {
-                padding: 4px 12px;
-                font-size: 0.65rem;
+            .video-wrapper {
+                padding-bottom: 56.25%;
             }
         }
 
@@ -957,7 +930,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- LAB SUBMISSIONS -->
+        <!-- LAB SUBMISSIONS - DENGAN YOUTUBE EMBED -->
         <!-- ============================================================ -->
         <section class="section" id="labs">
             <h2>
@@ -979,9 +952,14 @@
                             <p>📸 Lab 1 - UI Screenshot</p>
                         </div>
                     </div>
-                    <a class="btn-youtube-lab" href="https://youtu.be/BnOxRomwGN8" target="_blank">
+
+                    <div class="video-label">
                         <span class="play-icon">▶</span> Watch Lab 1 Demo
-                    </a>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/BnOxRomwGN8?si=IjEKWGY2rpukMFo3" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned the fundamentals of Jetpack Compose UI. I practiced building layouts using Column, Row, and Box. I also learned how to use Material Design components like Buttons, TextFields, and Cards. This lab gave me a strong foundation for building the UI of my project.
                     </div>
@@ -999,9 +977,14 @@
                             <p>📸 Lab 2 - Interaction Screenshot</p>
                         </div>
                     </div>
-                    <a class="btn-youtube-lab" href="https://youtu.be/pkzu2MRBL50" target="_blank">
+
+                    <div class="video-label">
                         <span class="play-icon">▶</span> Watch Lab 2 Demo
-                    </a>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/pkzu2MRBL50?si=iyP-7WOeW1ZGDkhm" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned how to manage state in Compose using remember and mutableStateOf. I practiced handling user interactions like button clicks, text input changes, and updating the UI dynamically. This is crucial for building interactive applications.
                     </div>
@@ -1019,9 +1002,14 @@
                             <p>📸 Lab 3 - Material Design Screenshot</p>
                         </div>
                     </div>
-                    <a class="btn-youtube-lab" href="https://youtu.be/PyitejrOVFA" target="_blank">
+
+                    <div class="video-label">
                         <span class="play-icon">▶</span> Watch Lab 3 Demo
-                    </a>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/PyitejrOVFA?si=8ojLpCR7HZ6eHDsY" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I explored Material Design 3 components. I learned how to use Cards to display content, Chips for filtering, FloatingActionButton for primary actions, and BottomNavigation for app navigation. I also learned about theming and colors.
                     </div>
@@ -1043,9 +1031,14 @@
                             <p>📸 Lab 4 - Navigation Screenshot</p>
                         </div>
                     </div>
-                    <a class="btn-youtube-lab" href="https://youtu.be/YZzPAbiAY8g" target="_blank">
+
+                    <div class="video-label">
                         <span class="play-icon">▶</span> Watch Lab 4 Demo
-                    </a>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/YZzPAbiAY8g?si=cgVfAGfIoY4JA_Nr" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned how to implement navigation in Compose using NavHost and NavController. I practiced defining routes, navigating between screens, passing arguments, and implementing BottomNavigation. This is essential for multi-screen apps.
                     </div>
@@ -1063,9 +1056,14 @@
                             <p>📸 Lab 5 - Room Database Screenshot</p>
                         </div>
                     </div>
-                    <a class="btn-youtube-lab" href="https://youtu.be/rHpOqtmu0WY" target="_blank">
+
+                    <div class="video-label">
                         <span class="play-icon">▶</span> Watch Lab 5 Demo
-                    </a>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/rHpOqtmu0WY?si=WT7aNNNKi1GztA6p" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned about Room Database for local persistence. I created Entity classes, DAO interfaces for database operations, and implemented the Repository pattern. I learned how to save and retrieve data offline, which is important for apps that need to work without internet.
                     </div>
@@ -1092,7 +1090,7 @@
                 <!-- PROJECT 1 -->
                 <div class="project-card">
                     <span class="project-badge">PROJECT 01</span>
-                    <h4>KerjaNow</h4>
+                    <h4>JobHub</h4>
 
                     <h4 style="font-size: 0.9rem; margin-top: 6px;">📌 Problem Statement</h4>
                     <div class="problem-box">
@@ -1108,13 +1106,17 @@
                         </div>
                     </div>
 
+                    <div class="video-label">
+                        <span class="play-icon">▶</span> Watch Project 1 VSR
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/xJ3Xn62d5Wk?si=8w_o9ZGWp6m08J2i" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="project-links">
                         <a class="btn-github" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project1" target="_blank">
                             <svg height="18" viewBox="0 0 16 16" width="18" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                             View Code
-                        </a>
-                        <a class="btn-youtube" href="https://youtu.be/xJ3Xn62d5Wk" target="_blank">
-                            ▶ Watch VSR
                         </a>
                     </div>
 
@@ -1160,13 +1162,17 @@
                         </div>
                     </div>
 
+                    <div class="video-label">
+                        <span class="play-icon">▶</span> Watch Project 2 VSR
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/zqtvvXlFtY8?si=CnVuRXB-ysL3HnUJ" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                     <div class="project-links">
                         <a class="btn-github" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2" target="_blank">
                             <svg height="18" viewBox="0 0 16 16" width="18" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                             View Code
-                        </a>
-                        <a class="btn-youtube" href="https://youtu.be/zqtvvXlFtY8?si=G-UHVUt1MN_0CibQ" target="_blank">
-                            ▶ Watch VSR
                         </a>
                     </div>
 
@@ -1258,7 +1264,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- FOOTER - DENGAN BACKGROUND GRADIENT BIRU -->
+        <!-- FOOTER -->
         <!-- ============================================================ -->
         <footer class="footer">
             <div class="footer-content">
