@@ -29,7 +29,7 @@
         }
 
         /* ============================================================ */
-        /* NAVIGATION TABS - "KerjaNow" di KIRI */
+        /* NAVIGATION TABS */
         /* ============================================================ */
         .nav-tabs {
             background: white;
@@ -50,7 +50,6 @@
             background: rgba(255, 255, 255, 0.92);
         }
 
-        /* ===== "KerjaNow" BIRU BOLD di KIRI ===== */
         .nav-tabs .app-name {
             font-weight: 800;
             font-size: 1rem;
@@ -114,7 +113,7 @@
         }
 
         /* ============================================================ */
-        /* HEADER - DENGAN GAMBA DI KANAN */
+        /* HEADER */
         /* ============================================================ */
         .header {
             background: linear-gradient(135deg, #0c2340, #1a3a5c, #2b6c8c);
@@ -192,7 +191,6 @@
             color: #c8dce8;
         }
 
-        /* ===== GAMBA DI KANAN HEADER ===== */
         .header-right {
             position: relative;
             z-index: 1;
@@ -216,21 +214,6 @@
             box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
         }
 
-        .header-right .profile-placeholder {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2b6c8c, #4a9fc7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            color: white;
-            font-weight: 300;
-        }
-
         @media (max-width: 700px) {
             .header {
                 flex-direction: column;
@@ -240,11 +223,9 @@
             .header-left h1 {
                 font-size: 2rem;
             }
-            .header-right .profile-image,
-            .header-right .profile-placeholder {
+            .header-right .profile-image {
                 width: 100px;
                 height: 100px;
-                font-size: 3rem;
             }
         }
 
@@ -423,9 +404,32 @@
             line-height: 1.6;
         }
 
-        .lab-item .video-link {
-            display: inline-block;
+        /* ===== BUTTON YOUTUBE UNTUK LAB ===== */
+        .btn-youtube-lab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff0000;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
             margin-top: 4px;
+        }
+
+        .btn-youtube-lab:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+            color: white;
+        }
+
+        .btn-youtube-lab .play-icon {
+            font-size: 0.9rem;
         }
 
         /* ============================================================ */
@@ -559,13 +563,55 @@
 
         .project-links {
             display: flex;
-            gap: 16px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin: 8px 0;
+            margin: 10px 0;
         }
 
-        .project-links a {
-            font-size: 0.85rem;
+        /* ===== BUTTON GITHUB ===== */
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #24292e;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-github:hover {
+            background: #1a1e22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        /* ===== BUTTON YOUTUBE ===== */
+        .btn-youtube {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff0000;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-youtube:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+            color: white;
         }
 
         .reflection-box {
@@ -597,25 +643,94 @@
         }
 
         /* ============================================================ */
-        /* FOOTER */
+        /* FOOTER - PROFESSIONAL */
         /* ============================================================ */
         .footer {
-            text-align: center;
-            padding: 24px 0 10px;
-            font-size: 0.82rem;
-            color: #8a9aae;
-            border-top: 1px solid #eef2f7;
-            margin-top: 10px;
+            background: white;
+            padding: 32px 40px;
+            border-radius: 20px;
+            margin-top: 24px;
+            border: 1px solid #eef2f7;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
 
-        .footer .footer-name {
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #2b6c8c, #7ec8e3);
+            margin: 0 auto 16px auto;
+            border-radius: 10px;
+        }
+
+        .footer-name {
+            font-size: 1.1rem;
             font-weight: 700;
             color: #0c2340;
+            letter-spacing: -0.3px;
         }
 
-        .footer .footer-highlight {
+        .footer-details {
+            font-size: 0.9rem;
+            color: #4a5a6a;
+            margin-top: 4px;
+            line-height: 1.8;
+        }
+
+        .footer-details span {
+            display: inline-block;
+        }
+
+        .footer-details .dot {
+            color: #b8d4e8;
+            margin: 0 6px;
+        }
+
+        .footer-uni {
+            font-size: 0.85rem;
             color: #2b6c8c;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .footer-instructor {
+            font-size: 0.85rem;
+            color: #4a5a6a;
+            margin-top: 2px;
+        }
+
+        .footer-copyright {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #eef2f7;
+            font-size: 0.75rem;
+            color: #8a9aae;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-copyright strong {
+            color: #1a3a5c;
             font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .footer {
+                padding: 24px 20px;
+            }
+            .footer-name {
+                font-size: 1rem;
+            }
+            .footer-details {
+                font-size: 0.8rem;
+            }
+            .footer-details .dot {
+                margin: 0 3px;
+            }
         }
 
         /* ============================================================ */
@@ -669,6 +784,11 @@
             .project-card {
                 padding: 18px 16px;
             }
+            .btn-github,
+            .btn-youtube {
+                padding: 6px 14px;
+                font-size: 0.7rem;
+            }
         }
 
         /* ============================================================ */
@@ -697,7 +817,7 @@
     <div class="container">
 
         <!-- ============================================================ -->
-        <!-- NAVIGATION TABS - "KerjaNow" di KIRI -->
+        <!-- NAVIGATION TABS -->
         <!-- ============================================================ -->
         <nav class="nav-tabs">
             <span class="app-name">
@@ -713,19 +833,16 @@
         </nav>
 
         <!-- ============================================================ -->
-        <!-- HEADER - DENGAN GAMBA DI KANAN -->
+        <!-- HEADER -->
         <!-- ============================================================ -->
         <header class="header">
             <div class="header-left">
                 <h1>✨ <span>My e-Portfolio</span></h1>
                 <p>Mobile Programming — TK2323 / TM2213</p>
-                <span class="badge">📍 A210192 · Alieya Balqish · Dr. Rimaniza</span>
+                <span class="badge">📍 A210192 · Nur Alieya Balqish · Dr. Rimaniza</span>
             </div>
             <div class="header-right">
-                <!-- ===== GANTI 'profile.png' DENGAN NAMA FAIL GAMBA ANDA ===== -->
                 <img src="profile.png" alt="Profile" class="profile-image" />
-                <!-- ATAU GUNA INI JIKA NAK GUNA PLACEHOLDER -->
-                <!-- <div class="profile-placeholder">👩</div> -->
             </div>
         </header>
 
@@ -738,7 +855,7 @@
                 Student Profile
             </h2>
 
-            <p><strong>Name:</strong> Nur Alieya Balqish Binti Nor Azman </p>
+            <p><strong>Name:</strong> Nur Alieya Balqish Binti Nor Azman</p>
             <p><strong>Matric No:</strong> A210192</p>
             <p><strong>Programme:</strong> Bachelor of Information Technology</p>
             <p><strong>Instructor:</strong> Dr. Rimaniza</p>
@@ -818,6 +935,7 @@
 
             <div class="lab-grid">
 
+                <!-- LAB 1 -->
                 <div class="lab-item">
                     <span class="lab-number">LAB 01</span>
                     <h3>📘 UI</h3>
@@ -829,14 +947,15 @@
                             <p>📸 Lab 1 - UI Screenshot</p>
                         </div>
                     </div>
-                    <p class="video-link">
-                        <a class="link" href="https://youtu.be/BnOxRomwGN8" target="_blank">🎥 Watch Lab 1 Demo →</a>
-                    </p>
+                    <a class="btn-youtube-lab" href="https://youtu.be/BnOxRomwGN8" target="_blank">
+                        <span class="play-icon">▶</span> Watch Lab 1 Demo
+                    </a>
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned the fundamentals of Jetpack Compose UI. I practiced building layouts using Column, Row, and Box. I also learned how to use Material Design components like Buttons, TextFields, and Cards. This lab gave me a strong foundation for building the UI of my project.
                     </div>
                 </div>
 
+                <!-- LAB 2 -->
                 <div class="lab-item">
                     <span class="lab-number">LAB 02</span>
                     <h3>📘 Interaction</h3>
@@ -848,14 +967,15 @@
                             <p>📸 Lab 2 - Interaction Screenshot</p>
                         </div>
                     </div>
-                    <p class="video-link">
-                        <a class="link" href="https://youtu.be/pkzu2MRBL50" target="_blank">🎥 Watch Lab 2 Demo →</a>
-                    </p>
+                    <a class="btn-youtube-lab" href="https://youtu.be/pkzu2MRBL50" target="_blank">
+                        <span class="play-icon">▶</span> Watch Lab 2 Demo
+                    </a>
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned how to manage state in Compose using remember and mutableStateOf. I practiced handling user interactions like button clicks, text input changes, and updating the UI dynamically. This is crucial for building interactive applications.
                     </div>
                 </div>
 
+                <!-- LAB 3 -->
                 <div class="lab-item">
                     <span class="lab-number">LAB 03</span>
                     <h3>📘 Material Design</h3>
@@ -867,9 +987,9 @@
                             <p>📸 Lab 3 - Material Design Screenshot</p>
                         </div>
                     </div>
-                    <p class="video-link">
-                        <a class="link" href="https://youtu.be/PyitejrOVFA" target="_blank">🎥 Watch Lab 3 Demo →</a>
-                    </p>
+                    <a class="btn-youtube-lab" href="https://youtu.be/PyitejrOVFA" target="_blank">
+                        <span class="play-icon">▶</span> Watch Lab 3 Demo
+                    </a>
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I explored Material Design 3 components. I learned how to use Cards to display content, Chips for filtering, FloatingActionButton for primary actions, and BottomNavigation for app navigation. I also learned about theming and colors.
                     </div>
@@ -879,6 +999,7 @@
 
             <div class="lab-grid-bottom">
 
+                <!-- LAB 4 -->
                 <div class="lab-item">
                     <span class="lab-number">LAB 04</span>
                     <h3>📘 Navigation</h3>
@@ -890,14 +1011,15 @@
                             <p>📸 Lab 4 - Navigation Screenshot</p>
                         </div>
                     </div>
-                    <p class="video-link">
-                        <a class="link" href="https://youtu.be/YZzPAbiAY8g" target="_blank">🎥 Watch Lab 4 Demo →</a>
-                    </p>
+                    <a class="btn-youtube-lab" href="https://youtu.be/YZzPAbiAY8g" target="_blank">
+                        <span class="play-icon">▶</span> Watch Lab 4 Demo
+                    </a>
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned how to implement navigation in Compose using NavHost and NavController. I practiced defining routes, navigating between screens, passing arguments, and implementing BottomNavigation. This is essential for multi-screen apps.
                     </div>
                 </div>
 
+                <!-- LAB 5 -->
                 <div class="lab-item">
                     <span class="lab-number">LAB 05</span>
                     <h3>📘 Room Database</h3>
@@ -909,9 +1031,9 @@
                             <p>📸 Lab 5 - Room Database Screenshot</p>
                         </div>
                     </div>
-                    <p class="video-link">
-                        <a class="link" href="https://youtu.be/rHpOqtmu0WY" target="_blank">🎥 Watch Lab 5 Demo →</a>
-                    </p>
+                    <a class="btn-youtube-lab" href="https://youtu.be/rHpOqtmu0WY" target="_blank">
+                        <span class="play-icon">▶</span> Watch Lab 5 Demo
+                    </a>
                     <div class="reflection">
                         <strong>💭 Reflection:</strong> In this lab, I learned about Room Database for local persistence. I created Entity classes, DAO interfaces for database operations, and implemented the Repository pattern. I learned how to save and retrieve data offline, which is important for apps that need to work without internet.
                     </div>
@@ -955,8 +1077,13 @@
                     </div>
 
                     <div class="project-links">
-                        <a class="link" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project1" target="_blank">🔗 GitHub Repo →</a>
-                        <a class="link" href="https://youtu.be/xJ3Xn62d5Wk" target="_blank">🎥 Watch VSR →</a>
+                        <a class="btn-github" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project1" target="_blank">
+                            <svg height="18" viewBox="0 0 16 16" width="18" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            View Code
+                        </a>
+                        <a class="btn-youtube" href="https://youtu.be/xJ3Xn62d5Wk" target="_blank">
+                            ▶ Watch VSR
+                        </a>
                     </div>
 
                     <h4 style="margin-top: 10px; font-size: 0.9rem;">📝 Lessons Learned</h4>
@@ -1002,8 +1129,13 @@
                     </div>
 
                     <div class="project-links">
-                        <a class="link" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2" target="_blank">🔗 GitHub Repo →</a>
-                        <a class="link" href="https://youtu.be/zqtvvXlFtY8?si=G-UHVUt1MN_0CibQ" target="_blank">🎥 Watch VSR →</a>
+                        <a class="btn-github" href="https://github.com/alieyabalqish/A210192_AlieyaBalqish_DrNiza_Project2" target="_blank">
+                            <svg height="18" viewBox="0 0 16 16" width="18" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            View Code
+                        </a>
+                        <a class="btn-youtube" href="https://youtu.be/zqtvvXlFtY8?si=G-UHVUt1MN_0CibQ" target="_blank">
+                            ▶ Watch VSR
+                        </a>
                     </div>
 
                     <h4 style="margin-top: 10px; font-size: 0.9rem;">✅ Features Implemented (4 Pillars)</h4>
@@ -1094,11 +1226,32 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- FOOTER -->
+        <!-- FOOTER - PROFESSIONAL -->
         <!-- ============================================================ -->
         <footer class="footer">
-            &copy; 2026 · <span class="footer-name">Alieya Balqish</span> · A210192 · Mobile Programming Project 2
-            <br><span style="font-size: 0.75rem; color: #aab8c8;">✨ Built with <span class="footer-highlight">❤</span> for TK2323</span>
+            <div class="footer-content">
+                <div class="footer-divider"></div>
+
+                <div class="footer-name">Nur Alieya Balqish Binti Nor Azman</div>
+
+                <div class="footer-details">
+                    <span>Matric No: A210192</span>
+                    <span class="dot">·</span>
+                    <span>Bachelor of Information Technology</span>
+                </div>
+
+                <div class="footer-uni">Universiti Kebangsaan Malaysia</div>
+
+                <div class="footer-instructor">Instructor: Dr. Rimaniza</div>
+
+                <div style="margin-top: 6px; font-size: 0.85rem; color: #2b6c8c; font-weight: 500;">
+                    Mobile Programming e-Portfolio
+                </div>
+
+                <div class="footer-copyright">
+                    &copy; 2026 All Rights Reserved
+                </div>
+            </div>
         </footer>
 
     </div>
